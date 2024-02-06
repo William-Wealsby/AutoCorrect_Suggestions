@@ -27,7 +27,7 @@ class window:
         self.suggestion3.grid(row=0, column=6, columnspan=3)
         self.del_button = ttk.Button(frame1, text='Delete Text', command=self.delete)
         self.del_button.grid(row=0, column=9, columnspan=3)
-        self.text = tk.Text(frame1, height=14, width=50)
+        self.text = tk.Text(frame1, height=14, width=48)
         self.text.grid(row=1, column=0,columnspan=12)
        
         self.root.bind('<Key>',self.update)
