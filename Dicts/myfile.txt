@@ -41,6 +41,7 @@ from
 they
 we
 say
-orwill
+or
+will
 my
 one
