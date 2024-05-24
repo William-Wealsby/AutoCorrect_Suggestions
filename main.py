@@ -40,11 +40,9 @@ class window:
         for file in files:
             self.fileMenu.add_radiobutton(label=file, variable=self.fileselected, value = file)
 
-
         self.root.mainloop()
 
     def replace(self,word):
-        print("i am getting called ",word)
         text = self.text.get(1.0, 'end')
         text = ''.join([letter for letter in text if letter != '\n'])
         textlist = text.split(' ')
@@ -52,8 +50,6 @@ class window:
         text = ' '.join(textlist)
         self.text.delete(1.0,'end')
         self.text.insert(1.0,text)
-
-        print(word)
     
     def update(self,event):
         self.root.after(1,self._update)
@@ -69,8 +65,6 @@ class window:
             textlist = text.split(' ')
             if textlist:
                 currentword = textlist[len(textlist)-1]
-                print(file)
-                print(currentword)
                 self.search(currentword)
                 self.suggestion1.config(text=self.suggestions[0])
                 self.suggestion2.config(text=self.suggestions[1])
@@ -78,6 +72,9 @@ class window:
 
                 
     def search(self,word):
+        # create 1 buffers for 3 strings, 61 length characters long (20 letters max each and the return character)
+        c_string = 
+
         self.suggestions = ['three','test','words']
 
     def delete(self):
